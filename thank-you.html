@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Your Free Scripture Cards — Created &amp; Called</title>
+<style>
+  :root{ --bg:#0d0d10; --bg-card:#1c1c23; --text:#f2f0eb; --text-muted:#a3a09a;
+         --accent:#d9a441; --accent-soft:rgba(217,164,65,.12); }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+       line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;
+       display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
+  .card{position:relative;max-width:560px;width:100%;overflow:hidden}
+  .card::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);
+       width:700px;height:500px;background:radial-gradient(closest-side,var(--accent-soft),transparent);
+       pointer-events:none;z-index:-1}
+  .star{color:var(--accent);font-size:2rem;margin-bottom:1.25rem}
+  .eyebrow{display:inline-block;color:var(--accent);font-size:.8rem;font-weight:600;
+       letter-spacing:.22em;text-transform:uppercase;margin-bottom:1rem}
+  h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin-bottom:1.1rem}
+  h1 em{font-style:normal;color:var(--accent)}
+  p{color:var(--text-muted);font-size:1.1rem;max-width:44ch;margin:0 auto 2rem}
+  .btn{display:inline-block;padding:1rem 2.4rem;border-radius:999px;font-size:1.05rem;font-weight:600;
+       text-decoration:none;letter-spacing:.02em;background:var(--accent);color:var(--bg);
+       transition:transform .15s,filter .15s}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+  .note{margin-top:1.5rem;font-size:.9rem;color:var(--text-muted)}
+  .foot{margin-top:2.5rem;font-size:.85rem;color:var(--text-muted)}
+  .foot a{color:var(--text-muted)}
+  .foot a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="star">&#10022;</div>
+    <span class="eyebrow">A Free Gift</span>
+    <h1>Your cards are <em>ready.</em></h1>
+    <p>Thank you for joining Created &amp; Called. Here are your six Scripture comfort cards —
+       print them, cut them, and keep one close.</p>
+    <a class="btn" href="/free/scripture-for-every-season.pdf" download>Download your free cards</a>
+    <p class="note">Prefer A4? <a href="/free/scripture-for-every-season-a4.pdf" download style="color:var(--accent)">Download the A4 version</a>.</p>
+    <div class="foot">
+      <p>Keep an eye on your inbox for new printables and the occasional word of encouragement.<br>
+         &larr; <a href="/">Back to Created &amp; Called</a> &middot;
+         <a href="https://createdcalleduk.etsy.com" target="_blank" rel="noopener">Shop on Etsy</a></p>
+    </div>
+  </div>
+</body>
+</html>

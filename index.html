@@ -423,8 +423,12 @@
          alt="Preview of the free printable Scripture comfort cards — six verses for every season">
     <p>Six verses to keep close — for when you&rsquo;re anxious, afraid, weary, or need hope. Pop in your email and we&rsquo;ll send the printable set straight to your inbox, free. You&rsquo;ll also be first to hear about new printables, subscriber discounts, and the occasional word of encouragement. No spam — ever.</p>
 
-    <!-- Connected to Mailchimp: audience "Created & Called" (createdcalled / us8) -->
-    <form class="signup-form" action="https://createdcalled.us8.list-manage.com/subscribe/post?u=8985885a26ca032f21f8036ca&amp;id=dd4a8a28ff" method="POST">
+    <!-- Connected to Mailchimp: audience "Created & Called" (createdcalled / us8).
+         Posts to Mailchimp in a hidden iframe, then sends the visitor to the
+         on-site thank-you page where they download the free cards. -->
+    <form class="signup-form" target="mc-sink"
+          onsubmit="setTimeout(function(){window.location.href='/thank-you.html';},1200);"
+          action="https://createdcalled.us8.list-manage.com/subscribe/post?u=8985885a26ca032f21f8036ca&amp;id=dd4a8a28ff" method="POST">
       <input type="email" name="EMAIL" placeholder="Your email address" required>
       <!-- Honeypot field: hidden from humans, catches spam bots. Leave as is. -->
       <div style="position:absolute; left:-5000px;" aria-hidden="true">
@@ -432,6 +436,7 @@
       </div>
       <button type="submit">Send My Free Cards</button>
     </form>
+    <iframe name="mc-sink" title="signup" aria-hidden="true" style="display:none"></iframe>
     <p class="fine-print">We&rsquo;ll email your free cards, then only when there&rsquo;s something worth sharing. Unsubscribe anytime.</p>
   </div>
 </section>
